@@ -154,17 +154,7 @@
           </button>
 
           <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-
+          
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
@@ -332,15 +322,122 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
+
+          
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus-circle fa-sm text-white-50"></i> Create Project</a>
+            <h1 class="h3 mb-0 text-gray-800">Projects</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#createprojectModal"> <i class="fas fa-plus-circle fa-sm text-white-50"></i> Generate Report </a>
           </div>
 
+          
+          <!-- </div>           -->
+            <p class="mb-4">This page is a collection of the list of projects created</p>
 
+
+          <div class="row">
+            <div class="btn-group col-xl-2 col-md-6 mb-3">
+              <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Year
+              <span class="caret"></span>
+              </button>
+                <ul class="dropdown-menu text-center shadow animated--fade-in">
+                <li><a class="dropdown-item" href="#">Now</a></li>
+                <li><a class="dropdown-item" href="#">2018</a></li>
+                <li><a class="dropdown-item" href="#">2017</a></li>
+                </ul>
+          </div>
+  
+          <div class="btn-group col-xl-3 col-md-6 mb-3">
+              <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Divisi
+              <span class="caret"></span>
+              </button>
+                <ul class="dropdown-menu text-center shadow animated--fade-in">
+                <li><a class="dropdown-item" href="#">Div 1</a></li>
+                <li><a class="dropdown-item" href="#">Div 2</a></li>
+                <li><a class="dropdown-item" href="#">Div 3</a></li>
+                </ul>
+          </div>
+          <div class="float-right">
+            <a href="#" class="text-center btn btn-sm btn-danger shadow-sm" data-toggle="modal" data-target="#createprojectModal"> <i class="fas fa-plus-circle fa-sm text-white-50"></i> Create Project </a>
+          </div>
+
+         
         </div>
+
+        <div class=" align-items-center justify-content-between mb-2">
+          <form class=" d-inline mx-4 mw-100 navbar-search">
+          <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-2">
+            <div class="input-group">
+              <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+          </form>
+        </div>
+
+          <div class="col-auto"></div>
+
+
+<!-- DataTales Example -->
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card shadow mb-4">
+              <div class="card-body">
+                <h5 class="card-title text-center">Project Name</h5>
+                <div class="content-wrapper">
+                  <p class="card-text">Description of project here</p>
+                  <h6>Project Progress<span class="percentage float-right">38%</span></h6>
+                  <div class="progress progress-striped mb-4 active">
+                      <div id="progressbar"  class="progress-bar active" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="text-center">
+                 <a href="#" class="btn btn-primary">Details</a>
+                </div>
+                </div>
+              </div>
+            </div> 
+            </div>
+            <div class="col-sm-6">
+              <div class="card shadow mb-4">
+              <div class="card-body">
+                <h5 class="card-title text-center">Project Name</h5>
+                <div class="content-wrapper">
+                  <p class="card-text">Description of project here</p>
+                  <h6>Project Progress<span class="float-right">50%</span></h6>
+                  <div class="progress mb-4">
+                      <div id="progressbar1" class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="text-center">
+                 <a href="#" class="btn btn-primary">Details</a>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card shadow mb-4">
+              <div class="card-body">
+                <h5 class="card-title text-center">Project Name</h5>
+                <div class="content-wrapper">
+                  <p class="card-text">Description of project here</p>
+                  <h6>Project Progress<span class="float-right">50%</span></h6>
+                  <div class="progress mb-4">
+                      <div id="progressbar2" class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="text-center">
+                 <a href="#" class="btn btn-primary">Details</a>
+                </div> 
+              </div>
+            </div>
+            </div>
+          </div>
         <!-- /.container-fluid -->
 
+      </div>
       </div>
       <!-- End of Main Content -->
 
@@ -365,26 +462,85 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+  <!-- createprojectModal Modal-->
+  <div class="modal fade createprojectModal-modal-lg" id="createprojectModal" tabindex="-1" role="dialog" aria-labelledby="createprojectModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <h5 class="modal-title" id="createprojectModal">Setting Up for creating new Project</h5>
+          <!-- <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
-          </button>
+          </button> -->
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
+        <div class="modal-body">Please fill data below</div>
+        <form class="project">
+        <div class="form-group modal-body mx-2">
+        <div class="md-form mb-1">
+          <i class="fas fa-file-alt prefix grey-text"> Project Name</i>
+          <input type="text" name="Projectname" id="projectname" class="form-control form-control-project" validation>
+        </div>
+        </div>
+        <div class="form-group modal-body mx-2">
+        <div class="md-form mb-1">
+          <i class="fas fa-comment prefix grey-text"> Project Description</i>
+          <textarea name="Projectname" id="projectname" class="md-textarea form-control form-control-project" validation></textarea> 
+        </div>
+        <div class="md-form mb-1">
+          <i class="fas fa-user-circle prefix grey-text"> Product Owner </i>
+          <input type="text" name="productownerr" id="productowner" class="form-control form-control-project" validation>
+        </div>
+        <div class="md-form mb-1">
+          <i class="fas fa-user-circle prefix grey-text"> Project Manager </i>
+          <input type="text" name="projectmanager" id="projectmanager" class="form-control form-control-project" validation>
+        </div>
+        <div class="md-form mb-1">
+            <i class="fas fa-user-circle prefix grey-text"> IT SP </i>
+            <input type="text" name="projectname" id="projectname" class="form-control form-control-project" validation>
+          </div>
+        </div>
+          <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="#">Create</a>
         </div>
+        </form>
       </div>
     </div>
   </div>
 
   <!-- Bootstrap core JavaScript-->
+<script type="text/javascript">
+  // var autonum = 0;
+  // $(.progress).each(function())
+  // {
+  //   autonum++;
+  //   var newID = 'progressbar'+autonum;
+  //   $(this).attr('progressbar',newID);
+  //   $(this).val(i);
+  //   var
+  // };
+  </script>
+
+<script type="text/javascript">
+
+ $(document).ready(function() {
+
+  var bars = $('.progress-bar');
+  for (i = 0; i < bars.length; i++) {
+    console.log(i);
+    var progress = $(bars[i]).attr('aria-valuenow');
+    $(bars[i]).width(progress + '%');
+    if (progress >= "90") {
+      $(bars[i]).addClass("bar-success");
+    } else if (progress >= "50" && progress < "90") {
+      $(bars[i]).addClass("bar-warning");
+    } else {
+      $(bars[i]).addClass("bar-error");
+    }
+  }
+});
+
+</script>
+
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -395,5 +551,22 @@
   <script src="js/sb-admin-2.min.js"></script>
 
 </body>
-
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

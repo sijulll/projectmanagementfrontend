@@ -11,6 +11,67 @@
 
   <title>SB Admin 2 - Blank</title>
 
+  <style>
+        .accordion-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .accordion-menu li.open > ul {
+            display: block;
+        }
+        .accordion-menu li > ul {
+            /* position: absolute; */
+            display: none;
+            height: 0;
+            overflow: hidden;
+            transition: height 350ms ease-in-out;
+            margin-left: 25px;
+        }
+        .accordion-menu ul.is-visible {
+            display: block;
+            /* height: auto; */
+        }
+        .accordion-menu li {
+            border-bottom: 1px solid rgba(194, 194, 194, 0.333);
+            position: relative;
+            overflow: hidden;
+            transition: all .4s ease;
+        }
+        .accordion-menu li:last-child {
+            border: none;
+        }
+        .accordion-menu li::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .accordion-menu li > a > svg {
+            display: block;
+            position: relative;
+            fill: rgb(48, 48, 48);
+            width: 10px;
+            float: right;
+            transition: all .3s ease;
+        }
+        .accordion-menu li.open > a > svg {
+            transform: rotate(90deg);
+        }
+        .accordion-menu a {
+            background-color: aliceblue;
+            padding: 7px 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+        }
+        .accordion-menu * {
+            box-sizing: border-box;
+        }
+    </style>
+
+
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -329,10 +390,69 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="container">
+        <div class="accordion-menu col-menu">
+            <ul>
+                <li><a href="#">some link</a></li>    
+                <li><a href="#">some link</a></li>    
+                <li><a href="#">some link</a>
+                    <ul>
+                        <li><a href="#">some link</a></li>    
+                        <li><a href="#">some link</a></li>    
+                        <li><a href="#">some link</a>
+                            <ul>
+                                <li><a href="#">some link</a></li>    
+                                <li><a href="#">some link</a></li>    
+                                <li><a href="#">some link</a></li>    
+                            </ul>
+                        </li>    
+                        <li><a href="#">some link</a>
+                            <ul>
+                                <li><a href="#">some link</a></li>    
+                                <li><a href="#">some link</a>
+                                    <ul>
+                                        <li><a href="#">some link</a></li>
+                                        <li><a href="#">some link</a></li>
+                                        <li><a href="#">some link</a></li>
+                                        <li><a href="#">some link</a></li>
+                                        <li><a href="#">some link</a></li>
+                                        <li><a href="#">some link</a></li>
+                                        <li><a href="#">some link</a></li>
+                                    </ul>
+                                </li>    
+                                <li><a href="#">some link</a></li>    
+                            </ul>
+                        </li>    
+                        <li><a href="#">some link</a></li>    
+                    </ul>
+                </li>
+                <li><a href="#">some link</a></li>    
+                <li><a href="#">some link</a>
+                    <ul>
+                        <li><a href="#">some link</a></li>
+                        <li><a href="#">some link</a></li>
+                        <li><a href="#">some link</a></li>
+                        <li><a href="#">some link</a></li>
+                        <li><a href="#">some link</a></li>
+                        <li><a href="#">some link</a></li>
+                        <li><a href="#">some link</a></li>
+                    </ul>
+                </li>    
+            </ul>
+        </div>
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+              <a href="#" class="btn btn-secondary btn-icon-split btn-sm">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-plus-circle"></i>
+                    </span>
+                    <span class="text">Add Section</span>
+                  </a>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
 
         </div>
         <!-- /.container-fluid -->
@@ -389,6 +509,10 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/accordion-menu.js"></script>
+    <script>
+        new AccordionMenu('.col-menu');
+    </script>
 
 </body>
 
