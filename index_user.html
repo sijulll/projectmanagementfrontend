@@ -14,11 +14,92 @@
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css" rel="stylesheet" />
-
-
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Calendar -->
+  <link href='packages/core/main.css' rel='stylesheet' />
+  <link href='packages/daygrid/main.css' rel='stylesheet' />
+  <link href='packages/timegrid/main.css' rel='stylesheet' />
+  <link href='packages/list/main.css' rel='stylesheet' />
+  <!-- end Calendar --> 
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'dayGrid', 'timeGrid', 'list' ],
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      },
+      defaultDate: '2019-08-12',
+      navLinks: true, // can click day/week names to navigate views
+      businessHours: true, // display business hours
+      editable: true,
+      events: [
+        {
+          title: 'Business Lunch',
+          start: '2019-08-03T13:00:00',
+          constraint: 'businessHours'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-08-13T11:00:00',
+          constraint: 'availableForMeeting', // defined below
+          color: '#257e4a'
+        },
+        {
+          title: 'Conference',
+          start: '2019-08-18',
+          end: '2019-08-20'
+        },
+        {
+          title: 'Party',
+          start: '2019-08-29T20:00:00'
+        },
+
+        // areas where "Meeting" must be dropped
+        {
+          groupId: 'availableForMeeting',
+          start: '2019-08-11T10:00:00',
+          end: '2019-08-11T16:00:00',
+          rendering: 'background'
+        },
+        {
+          groupId: 'availableForMeeting',
+          start: '2019-08-13T10:00:00',
+          end: '2019-08-13T16:00:00',
+          rendering: 'background'
+        },
+
+        // red areas where no events can be dropped
+        {
+          start: '2019-08-24',
+          end: '2019-08-28',
+          overlap: false,
+          rendering: 'background',
+          color: '#ff9f89'
+        },
+        {
+          start: '2019-08-06',
+          end: '2019-08-08',
+          overlap: false,
+          rendering: 'background',
+          color: '#ff9f89'
+        }
+      ]
+    });
+
+    calendar.render();
+  });
+
+</script>
+
+
 
 </head>
 
@@ -280,7 +361,7 @@
           </div>
 
          <!--  calendar  -->
-          <div id="calendar"></div>
+            <div id='calendar'></div>
          <!-- end of calendar -->
           </div>
 
@@ -331,53 +412,9 @@
   </div>
 
 
+ 
   <!-- Bootstrap core JavaScript-->
-  <script type="text/javascript">
-    $(document).ready(function() {
-    $('#calendar').fullCalendar({
-    header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay,listWeek'
-    },
-    defaultDate: '2018-11-16',
-    navLinks: true,
-    eventLimit: true,
-    events: [{
-            title: 'Front-End Conference',
-            start: '2018-11-16',
-            end: '2018-11-18'
-        },
-        {
-            title: 'Hair stylist with Mike',
-            start: '2018-11-20',
-            allDay: true
-        },
-        {
-            title: 'Car mechanic',
-            start: '2018-11-14T09:00:00',
-            end: '2018-11-14T11:00:00'
-        },
-        {
-            title: 'Dinner with Mike',
-            start: '2018-11-21T19:00:00',
-            end: '2018-11-21T22:00:00'
-        },
-        {
-            title: 'Chillout',
-            start: '2018-11-15',
-            allDay: true
-        },
-        {
-            title: 'Vacation',
-            start: '2018-11-23',
-            end: '2018-11-29'
-        },
-    ]
-});
-    });
-  </script>
-
+ 
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -387,16 +424,20 @@
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
-  <!-- Calendar -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.js"></script>
-
-
   <!-- Page level plugins -->
   <script src="vendor/chart.js/Chart.min.js"></script>
 
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+ 
+  <!-- Calendar Script -->
+  <script src='packages/core/main.js'></script>
+  <script src='packages/interaction/main.js'></script>
+  <script src='packages/daygrid/main.js'></script>
+  <script src='packages/timegrid/main.js'></script>
+  <script src='packages/list/main.js'></script>
+  <!-- end Calendar Script -->
 
 </body>
 
