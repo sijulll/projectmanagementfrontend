@@ -19,11 +19,6 @@
   <link href="css/sb-admin-2.min.css" rel="stylesheet" type="text/css" />
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-  
-
-
-
-
 </head>
 
 <body id="page-top">
@@ -65,7 +60,7 @@
             <i class="fas fa-fw fa-cog"></i>
             <span>Projects</span>
           </a>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingprojects" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Project Menus:</h6>
               <a class="collapse-item" href="#">Create Project</a>
@@ -85,7 +80,7 @@
               <h6 class="collapse-header">Manage Menus:</h6>
               <a class="collapse-item" href="#">Manage User</a>
               <a class="collapse-item" href="#">Manage Project Category</a>
-              <a class="collapse-item" href="#">Manage User Role</a>
+              <a class="collapse-item" href="#">User Role</a>
             </div>
           </div>
         </li>
@@ -203,6 +198,8 @@
                   <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="mr-3">
                       <div class="icon-circle bg-warning">
+
+
                         <i class="fas fa-exclamation-triangle text-white"></i>
                       </div>
                     </div>
@@ -334,7 +331,70 @@
                                   <h4>Project Task</h4>
                                 </div>
                                 <div>    
-                                  <p>Task Page Content</p>
+                                  <div class="container">
+                                    <div id="accordion">
+                                      <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                          <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseDefinition" aria-expanded="true" aria-controls="collapseOne">               <i class="fa" aria-hidden="true"></i>
+                                              Definition
+                                            </button>
+                                          </h5>
+                                        </div>
+
+                                        <div id="collapseDefinition" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                          <div class="card-body">
+                                            Definition Task
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                          <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseDevelopment" aria-expanded="false" aria-controls="collapseTwo">
+                                              <i class="fa" aria-hidden="true"></i>
+                                              Development
+                                            </button>
+                                          </h5>
+                                        </div>
+                                        <div id="collapseDevelopment" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                          <div class="card-body">
+                                            Development Task
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                          <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTesting" aria-expanded="false" aria-controls="collapseThree">
+                                              <i class="fa" aria-hidden="true"></i>
+                                              Testing
+                                            </button>
+                                          </h5>
+                                        </div>
+                                        <div id="collapseTesting" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                          <div class="card-body">
+                                            Testing Task
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                          <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseDeployment" aria-expanded="false" aria-controls="collapseThree">
+                                              <i class="fa" aria-hidden="true"></i>
+                                              Deployment 
+                                            </button>
+                                          </h5>
+                                        </div>
+                                        <div id="collapseDeployment" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                          <div class="card-body">
+                                            Deployment task
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
 
                               </div>
@@ -379,7 +439,7 @@
                                               <td>
                                                 <select class="form-control">
                                                   <option value="Not Available">Not Available</option>
-                                                  <option value="Capex" >Not yet signed</option>
+                                                  <option value="Capex" >Not signed yet</option>
                                                   <option value="Opex" >Has Been Signed</option>
                                                 </select>
                                               </td>
@@ -394,7 +454,7 @@
                                             <td>
                                               <select class="form-control">
                                                 <option value="Not Available">Not Available</option>
-                                                <option value="Capex" >Not yet signed</option>
+                                                <option value="Capex" >Not signed yet</option>
                                                 <option value="Opex" >Has Been Signed</option>
                                               </select>
                                             </td>
@@ -408,7 +468,7 @@
                                           <td>BRD</td>
                                           <td><select class="form-control">
                                             <option value="Not Available">Not Available</option>
-                                            <option value="Capex" >Not yet signed</option>
+                                            <option value="Capex" >Not signed yet</option>
                                             <option value="Opex" >Has Been Signed</option>
                                           </select>
                                         </td>
@@ -423,7 +483,7 @@
                                       <td>
                                         <select class="form-control">
                                           <option value="Not Available">Not Available</option>
-                                          <option value="Capex" >Not yet signed</option>
+                                          <option value="Capex" >Not signed yet</option>
                                           <option value="Opex" >Has Been Signed</option>
                                         </select>
                                       </td>
@@ -438,7 +498,7 @@
                                      <td>
                                        <select class="form-control">
                                         <option value="Not Available">Not Available</option>
-                                        <option value="Capex" >Not yet signed</option>
+                                        <option value="Capex" >Not signed yet</option>
                                         <option value="Opex" >Has Been Signed</option>
                                       </select>
                                     </td>
@@ -453,7 +513,7 @@
                                    <td>
                                      <select class="form-control">
                                       <option value="Not Available">Not Available</option>
-                                      <option value="Capex" >Not yet signed</option>
+                                      <option value="Capex" >Not signed yet</option>
                                       <option value="Opex" >Has Been Signed</option>
                                     </select>
                                   </td>
@@ -468,7 +528,7 @@
                                  <td>
                                    <select class="form-control">
                                     <option value="Not Available">Not Available</option>
-                                    <option value="Capex" >Not yet signed</option>
+                                    <option value="Capex" >Not signed yet</option>
                                     <option value="Opex" >Has Been Signed</option>
                                   </select>
                                 </td>
@@ -483,7 +543,7 @@
                                <td>
                                  <select class="form-control">
                                   <option value="Not Available">Not Available</option>
-                                  <option value="Capex" >Not yet signed</option>
+                                  <option value="Capex" >Not signed yet</option>
                                   <option value="Opex" >Has Been Signed</option>
                                 </select>
                               </td>
@@ -498,7 +558,7 @@
                              <td>
                                <select class="form-control">
                                 <option value="Not Available">Not Available</option>
-                                <option value="Capex" >Not yet signed</option>
+                                <option value="Capex" >Not signed yet</option>
                                 <option value="Opex" >Has Been Signed</option>
                               </select>
                             </td>
@@ -513,7 +573,7 @@
                            <td>
                              <select class="form-control">
                               <option value="Not Available">Not Available</option>
-                              <option value="Capex" >Not yet signed</option>
+                              <option value="Capex" >Not signed yet</option>
                               <option value="Opex" >Has Been Signed</option>
                             </select>
                           </td>
@@ -528,7 +588,7 @@
                          <td>
                            <select class="form-control">
                             <option value="Not Available">Not Available</option>
-                            <option value="Capex" >Not yet signed</option>
+                            <option value="Capex" >Not signed yet</option>
                             <option value="Opex" >Has Been Signed</option>
                           </select>
                         </td>
@@ -543,7 +603,7 @@
                        <td>
                          <select class="form-control">
                           <option value="Not Available">Not Available</option>
-                          <option value="Capex" >Not yet signed</option>
+                          <option value="Capex" >Not signed yet</option>
                           <option value="Opex" >Has Been Signed</option>
                         </select>
                       </td>
@@ -558,7 +618,7 @@
                      <td>
                       <select class="form-control">
                         <option value="Not Available">Not Available</option>
-                        <option value="Capex" >Not yet signed</option>
+                        <option value="Capex" >Not signed yet</option>
                         <option value="Opex" >Has Been Signed</option>
                       </select>
                     </td>
@@ -573,7 +633,7 @@
                    <td>
                     <select class="form-control">
                       <option value="Not Available">Not Available</option>
-                      <option value="Capex" >Not yet signed</option>
+                      <option value="Capex" >Not signed yet</option>
                       <option value="Opex" >Has Been Signed</option>
                     </select>
                   </td>
