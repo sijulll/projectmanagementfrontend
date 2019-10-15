@@ -320,7 +320,7 @@
             <div class="container-fluid">
 
               <!-- Page Heading -->
-              <h1 class="h3 mb-4 text-gray-800">Capex Budget Management</h1>
+              <h1 class="h3 mb-4 text-gray-800">Opex Budget Management</h1>
               <div class="row">
                 <div class="col-xl-12 col-md-3 mb-4">
                   <div class="card shadow h-100 py-2">
@@ -336,18 +336,19 @@
                             <option>Central & Credit Operation</option>
                             <option>Micro Businnes</option>
                             <option>Pension Businnes</option>
+                            <option>Pension Loyalty</option>
                           </select>
                         </div>
                       </div>
                       <div class="row no-gutters mb-3 align-items-center ">
                         <div class="col mr-2 ">
-                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Capex Budget :</div>
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Opex Budget :</div>
                           <input class="form-control">
                         </div>
                       </div>
                       <div class="row no-gutters mb-3 align-items-center ">
                         <div class="col mr-2 ">
-                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Capex Used :</div>
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Opex Used :</div>
                           <input class="form-control">
                         </div>
                       </div>
@@ -383,7 +384,7 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Capex Management</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Opex Management</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -391,27 +392,42 @@
                   <thead>
                     <tr>
                       <th>Division Name</th>
-                      <th>Capex Budget</th>
-                      <th>Capex Used</th>
+                      <th>Opex Budget</th>
+                      <th>Opex Used</th>
                       <th>New Projects</th>
                       <th>Carry Offers</th>
-                      <th>Total Projects</th>                        
+                      <th>Total Projects</th>
+                      <th>Date (dd/mm/yyyy)</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>PMO</td>
+                      <td>Pension Businnes</td>
                       <td>500.000.000</td>
                       <td>250.000.000</td>
                       <td>2</td>
                       <td>1</td>
                       <td>4</td>
+                      <td>04/12/2019</td>
                       <td>
                        <button type="button" class="btn btn-warning ">Edit</button>
                        <button type="button" class="btn btn-danger ">Delete</button>
                      </td>
                    </tr>
+                   <tr>
+                      <td>Project Management Office </td>
+                      <td>600.000.000</td>
+                      <td>150.000.000</td>
+                      <td>2</td>
+                      <td>1</td>
+                      <td>4</td>
+                      <td>04/12/2019</td>
+                      <td>
+                       <button type="button" class="btn btn-warning ">Edit</button>
+                       <button type="button" class="btn btn-danger ">Delete</button>
+                     </td>
+                   </tr
                  </tbody>
                </table>
              </div>
@@ -478,5 +494,5 @@
 <!-- Page level custom scripts -->
 <script src="js/demo/datatables-demo.js"></script>
 </body>
-
+    
 </html>
