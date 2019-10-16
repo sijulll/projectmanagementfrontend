@@ -297,9 +297,7 @@
                   </a>
                 </div>
               </li>
-
             </ul>
-
           </nav>
           <!-- End of Topbar -->
 
@@ -315,6 +313,20 @@
                     <form role="form">
                       <div class="row no-gutters mb-3 align-items-center ">
                         <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Project Code :</div>
+                          <input class="form-control">
+                        </div>
+                        <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Budget Type :</div>
+                          <select class="form-control">
+                            <option selected>--- Budget Type ---</option>
+                            <option value="Capex">Capex</option>
+                            <option value="Opex">Opex</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row no-gutters mb-3 align-items-center ">
+                        <div class="col mr-2 ">
                           <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Project Name :</div>
                           <input class="form-control">
                         </div>
@@ -328,24 +340,79 @@
                       <div class="row no-gutters mb-3 align-items-center ">
                         <div class="col mr-2 ">
                           <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Product Owner :</div>
+                          <select class="form-control">
+                            <option>--- Choose Division ---</option>
+                            <option value="">Project Management Office</option>
+                            <option value="">Risk Management</option>
+                            <option value="">Central & Credit Operation</option>
+                            <option value="">Micro Businnes</option>
+                            <option value="">Pension Businnes</option>
+                            <option value="">Pension Loyalty</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row no-gutters mb-3 align-items-center ">
+                        <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Project Manager :</div>
                           <input class="form-control">
                         </div>
                         <div class="col mr-2 ">
                           <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Project Category :</div>
                           <select class="form-control">
                             <option selected>Project Category</option>
-                            <option value="Capex" >Capex</option>
-                            <option value="Opex" >Opex</option>
+                            <option value="Capex">Capex</option>
+                            <option value="Opex">Opex</option>
                           </select>
                         </div>
                       </div>
-                      
+                      <div class="row no-gutters mb-3 align-items-center ">
+                        <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Developed By :</div>
+                          <select class="form-control">
+                            <option>--- Developed By ---</option>
+                            <option value="">In House</option>
+                            <option value="">Vendor</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row no-gutters mb-3 align-items-center ">
+                        <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Priority :</div>
+                          <select class="form-control">
+                            <option>--- Select Priority ---</option>
+                            <option value="">Regulatory</option>
+                            <option value="">Business</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row no-gutters mb-3 align-items-center ">
+                        <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Start Date :</div>
+                          <input class="form-control" id="startdate" placeholder="Select start date" type="Date">
+                        </div>
+                        <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">End Date :</div>
+                          <input id="enddate" placeholder="Select end date" class="form-control" type="date">
+                        </div>
+                      </div>
+                      <div class="row no-gutters mb-3 align-items-center ">
+                        <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Fiscal Year :</div>
+                          <input class="form-control">
+                        </div>
+                        <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Budget :</div>
+                          <input class="form-control">
+                        </div>
+                      </div>
+
                       <div class="row no-gutters mb-3 float-right ">
                         <div class="col mr-2 ">
                          <button type="button" class="btn btn-primary">Submit</button>
                        </div>
                      </div>
-
                    </form>
                  </div>
                </div>
@@ -366,18 +433,23 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
+                      <th>Project Code</th>
                       <th>Project Name</th>
-                      <th>Project Description</th>
                       <th>Project Owner</th>
+                      <th>Project Manager</th>
+                      <th>Budget Type</th>
                       <th>Project Category</th>
                       <th>Start date</th>
+                      <th>End date</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
+                      <th>P0001</th>
                       <td>TikTok</td>
                       <td>Apps</td>
+                      <td>Risk Management</td>
                       <td>Mang Udin</td>
                       <td>Capex</td>
                       <td>12/07/2015</td>
@@ -387,8 +459,10 @@
                      </td>
                    </tr>
                    <tr>
+                    <th>P0002</th>
                     <td>Project2</td>
                     <td>asp.net</td>
+                    <td>Pension Businnes</td>
                     <td>Samsudin</td>
                     <td>Opex</td>
                     <td>19/04/2012</td>
