@@ -318,15 +318,13 @@
                   <div class="card-body">
                     <form role="form">
                       <div class="row no-gutters mb-3 align-items-center">
-                        <div class="row no-gutters mb-3 align-items-center">
-                          <div class="col mr-2 ">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">NIK :</div>
-                            <input class="form-control">
-                          </div>
-                          <div class="col mr-2 ">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Full Name :</div>
-                            <input class="form-control">
-                          </div>
+                        <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">NIK :</div>
+                          <input class="form-control">
+                        </div>
+                        <div class="col mr-2 ">
+                          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Full Name :</div>
+                          <input class="form-control">
                         </div>
                       </div>
                       <div class="row no-gutters mb-3 align-items-center ">
@@ -340,8 +338,6 @@
                           <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Password :</div>
                           <input class="form-control">
                         </div>
-                      </div>
-                      <div class="row no-gutters mb-3 align-items-center ">
                         <div class="col mr-2 ">
                           <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Re-Password :</div>
                           <input class="form-control">
@@ -359,34 +355,32 @@
                           <input class="form-control">
                         </div>
                       </div>
-                       <div class="row no-gutters mb-3 align-items-center ">
+                      <div class="row no-gutters mb-3 align-items-center ">
                         <div class="col mr-2 ">
                           <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Role :</div>
                           <select class="form-control">
-                            <option>--- Select Priority ---</option>
+                            <option>--- Select ROle ---</option>
                             <option value="VERY HIGH">Super Admin</option>
                             <option value="HIGH">Admin</option>
                             <option value="MEDIUM">User</option>
                           </select>
                         </div>
                       </div>
-                       <div class="row no-gutters mb-3 align-items-center ">
+                      <div class="row no-gutters mb-3 align-items-center ">
                         <div class="col mr-2 ">
                           <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Division :</div>
                           <select class="form-control">
-                            <option>--- Select Priority ---</option>
+                            <option>--- Select Division ---</option>
                             <option value="VERY HIGH">PMO</option>
                             <option value="HIGH">IT</option>
                           </select>
                         </div>
                       </div>
-                      
                       <div class="row no-gutters mb-3 float-right ">
                         <div class="col mr-2 ">
                          <button type="button" class="btn btn-primary">Submit</button>
                        </div>
                      </div>
-
                    </form>
                  </div>
                </div>
@@ -394,9 +388,7 @@
            </div>
          </div>
          <!-- /.container-fluid -->
-
          <div class="container-fluid">
-
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -407,21 +399,25 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Fullname</th>
                       <th>NIK</th>
+                      <th>Username</th>
+                      <th>Fullname</th>
                       <th>Phone Number</th>
                       <th>Email</th>
-                      <th>Username</th>
+                      <th>Role</th>
+                      <th>Division</th>
                       <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Tiger Nixon</td>
                       <td>012394932</td>
+                      <td>Tiger Nixon</td>
+                      <td>Tinix</td>
                       <td>0812304002</td>
                       <td>Tiger@example.com</td>
-                      <td>Tinixon</td>
+                      <td>ADmin</td>
+                      <td>PMO</td>
                       <td>
                        <button type="button" class="btn btn-warning ">Edit</button>
                        <button type="button" class="btn btn-danger ">Delete</button>
