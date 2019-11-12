@@ -332,8 +332,8 @@
                   <nav>
                     <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
                       <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-Task" role="tab" aria-controls="nav-home" aria-selected="true">Task & Sub Task</a>
-                      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-Document" role="tab" aria-controls="nav-profile" aria-selected="false">Document</a>
-                      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-Discuss" role="tab" aria-controls="nav-profile" aria-selected="false">Discussion</a>
+                      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-Document" role="tab" aria-controls="nav-Document" aria-selected="false">Document</a>
+                      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-Discuss" role="tab" aria-controls="nav-Discuss" aria-selected="false">Discussion</a>
                     </div>
                   </nav>
                   <!-- Multi Tab nav end -->
@@ -361,16 +361,25 @@
                                               <i class="fas fa-ellipsis-v float-right mt-2"></i>
                                             </button>
                                             <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuDefinition">
-                                              <a class="dropdown-item" href="#">Add Task</a>
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddTask" >Add Task</a>
                                             </div>
                                           </h5>
-                                          
-                                          
                                         </div>
-
                                         <div id="collapseDefinition" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                           <div class="card-body">
-                                            Definition Task
+                                            <div class="ml-2">
+                                              <h2 class="badge badge-primary">Task Definition 1</h2>
+                                              <h7 class="badge badge-warning">user 001</h7>
+                                              <button class="btn float-right " type="button" id="dropdownMenuDefinitionTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fas fa-ellipsis-v float-right "></i>
+                                              </button>
+                                              <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuDefinitionTask">
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddSubTask" >Add Sub Task</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEditTask" >Edit Task</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAssign" >Assign To</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddTask" >Delete Task</a>
+                                              </div>
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
@@ -391,9 +400,51 @@
                                         </div>
                                         <div id="collapseDevelopment" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                           <div class="card-body">
-                                            Development Task
+                                           <div class="ml-2 ">
+                                            <h6 class="badge  badge-primary">Task Development 1</h6>
+                                            <button class="btn float-right " type="button" id="dropdownMenuDevelopmentTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              <i class="fas fa-ellipsis-v float-right"></i>
+                                            </button>
+                                            <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuDevelopmentTask">
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddSubTask" >Add Sub Task</a>
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEditTask" >Edit Task</a>
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddTask" >Assign To</a>
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddTask" >Delete Task</a>
+                                            </div>
+                                          </div>
+                                          <div class="ml-4 ">
+                                            <h6 class="badge  badge-info">Sub Task Development 1</h6>
+                                              <h6 class="badge badge-warning"><span class="fas fa-user-friends"></span> Si Jojon</h6>
+                                              <h6 class="badge badge-warning"><span class="fas fa-user-friends"></span> Ujang</h6>
+                                            <button class="btn float-right " type="button" id="dropdownMenuDevelopmentTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              <i class="fas fa-ellipsis-v float-right "></i>
+                                            </button>
+                                            <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuDevelopmentTask">
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEditTask" >Edit Sub Task</a>
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddTask" >Assign To</a>
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddTask" >Delete Task</a>
+                                            </div>
+                                          </div>
+                                          <div class="ml-4">
+                                            <h6 class="badge  badge-info"> Sub Task Development 2</h6>
+                                            <button class="btn float-right " type="button" id="dropdownMenuDevelopmentTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              <i class="fas fa-ellipsis-v float-right"></i>
+                                            </button>
+                                            <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuDevelopmentTask">
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalEditTask" >Edit Sub Task</a>
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddTask" >Assign To</a>
+                                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalAddTask" >Delete Task</a>
+                                            </div>
+                                          </div>
+
+                                          <div class="ml-2 mb-2 mt-3 ">
+                                            <h6 class="badge  badge-primary">Task Development 2</h6>
+                                            <button class="btn float-right " type="button" id="dropdownMenuDevelopmentTask" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                              <i class="fas fa-ellipsis-v float-right "></i>
+                                            </button>
                                           </div>
                                         </div>
+
                                       </div>
                                       <div class="card">
                                         <div class="card-header" id="headingThree">
@@ -406,7 +457,7 @@
                                               <i class="fas fa-ellipsis-v float-right mt-2"></i>
                                             </button>
                                             <div class="dropdown-menu animated--fade-in" aria-labelledby="dropdownMenuTesting">
-                                              <a class="dropdown-item" href="#">Add Task</a>
+                                              <a class="dropdown-item" href="#"data-toggle="modal" data-target="#modalAddTask" >Add Task</a>
                                             </div>
 
                                           </h5>
@@ -433,9 +484,9 @@
                                         </div>
                                         <div id="collapseDeployment" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                                           <div class="card-body">
-                                          <div class="card-body">
-                                            Deployment Task
-                                          </div>
+                                            <div class="card-body">
+                                              Deployment Task
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
@@ -448,10 +499,11 @@
                         </div>
                       </div>
                     </div>
+                  </div>
                     <!--  Tab Pane Project Task End -->
 
                     <!-- Tab Pane Document Begin -->
-                    <div class="tab-pane fade mt-4" id="nav-Document" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="tab-pane fade mt-4" id="nav-Document" role="tabpanel" aria-labelledby="nav-Document">
                       <div class="row bootstrap snippets">
                         <div class="col col-sm-12">
                           <div class="card shadow h-100 py-2">
@@ -839,6 +891,148 @@
     </div>
   </div>
 </div>
+<!--Modal Assign to-->
+<div class="modal fade bd-example-modal-lg" id="modalAssign" tabindex="-1" role="dialog" aria-labelledby="modalAddTask" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLabel">Assign task to ?</h6>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <form>
+        <div class="col mr-2 mt-2 mb-3 ">
+          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Name :</div>
+          <input class="form-control">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button" data-dismiss="modal">Submit</button>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Delete-->
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure ?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">Are you sure want delete this Task ?</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Nope</button>
+        <a class="btn btn-primary" href="login.html">Yaps !</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ADD-->
+<!-- Modal Add Task-->
+<div class="modal fade bd-example-modal-lg" id="modalAddTask" tabindex="-1" role="dialog" aria-labelledby="modalAddTask" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLabel">Input task name</h6>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <form>
+        <div class="col mr-2 mt-2 mb-2 ">
+          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Task Name :</div>
+          <input class="form-control">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button" data-dismiss="modal">Submit</button>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Sub Task-->
+<div class="modal fade modal-lg" id="modalSubTask" tabindex="-1" role="dialog" aria-labelledby="modalAddTask" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLabel">Input sub task name</h6>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <form>
+        <div class="col mr-2 mt-2 mb-2 ">
+          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Sub Task Name :</div>
+          <input class="form-control">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button" data-dismiss="modal">Submit</button>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit-->
+<!-- Modal Edit Task-->
+<div class="modal fade modal-lg" id="modalEditTask" tabindex="-1" role="dialog" aria-labelledby="modalAddTask" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLabel">Edit Task Name</h6>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <form>
+        <div class="col mr-2 mt-2 mb-2 ">
+          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Sub Task Name :</div>
+          <input class="form-control">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button" data-dismiss="modal">Submit</button>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit Task-->
+<div class="modal fade modal-lg" id="modalEditSubTask" tabindex="-1" role="dialog" aria-labelledby="modalAddTask" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title" id="exampleModalLabel">Edit Sub Task Name</h6>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <form>
+        <div class="col mr-2 mt-2 mb-2 ">
+          <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Sub Task Name :</div>
+          <input class="form-control">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button" data-dismiss="modal">Submit</button>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 
 <!-- Bootstrap core JavaScript-->
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -856,9 +1050,6 @@
 
 <!-- Page level custom scripts -->
 <script src="js/demo/datatables-demo.js"></script>
-
-
-
 
 </body>
 
